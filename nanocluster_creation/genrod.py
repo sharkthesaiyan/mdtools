@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import numpy as np
 import sys
-import goldfcc 
+import goldfcc
 import ntpath
 #don't get confused by the name, other elements can be used
 #gold used to be the only one
@@ -57,7 +57,7 @@ def main():
 
 		generateRod(z,r,n,l,element)
 	else:
-		print "use: python %s zlen r"%(ntpath.basename(sys.argv[0]))
+		print("use: python %s zlen r"%(ntpath.basename(sys.argv[0])))
 
 if __name__ == "__main__":
 	main()
