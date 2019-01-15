@@ -24,13 +24,12 @@ def main():
 	silicaFile = sys.argv[2]
 	meshfile=sys.argv[3]
 	emptySpace = float(sys.argv[4])
-	if(len(sys.argv)==8):
-		
+	#if(len(sys.argv)==8):	
 
 	coord, header = xyzio.readxyz(silicaFile)
 	coord = np.asarray([[a[0],a[1],a[2],a[3]] for a in coord])
 
-	print coord[0,:]
+	#print coord[0,:]
 
 	#Silica to be included
 	points, triangles = rec.read_vtk(meshfile)

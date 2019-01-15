@@ -1,5 +1,6 @@
 import numpy as np
 import sys
+import os
 
 def readxyz(fname):
 	with open(fname,"r") as f:
@@ -57,10 +58,10 @@ def copylattice(lattice, header, nx, ny, nz):
 
 def main():
 
-	fname = sys.argv[1]
-	nx = int(sys.argv[2])
-	ny = int(sys.argv[3])
-	nz = int(sys.argv[4])
+	fname = os.path.dirname(sys.argv[0])+"/SilicaL_4x1.xyz"
+	nx = int(sys.argv[1])
+	ny = int(sys.argv[2])
+	nz = int(sys.argv[3])
 
 	lattice, header = readxyz(fname)
 
