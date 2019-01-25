@@ -17,3 +17,7 @@ python $scriptpath/centralizexyz.py silicacopy_out.xyz
 ovitos $scriptpath/ovitos_get_surface.py $goldfile
 python $scriptpath/hole_to_silica.py $goldfile silicacopy_out_centralized.xyz surface.vtk 1.0
 python $scriptpath/combinexyz.py holedsilicaout.xyz $goldfile
+rm silicacopy_out.xyz
+rm silicacopy_out_centralized.xyz
+rm surface.vtk
+rm holedsilicaout.xyz

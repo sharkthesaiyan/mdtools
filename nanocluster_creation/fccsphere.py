@@ -52,10 +52,13 @@ def fcc_cube(n,l):
 
 
 def main():
-	if(len(sys.argv)>=4):	
+	if(len(sys.argv)>=3):	
 		radius = float(sys.argv[1])
 		n = int(sys.argv[2])
-		compression = float(sys.argv[3])
+		if(len(sys.argv) >=4):
+			compression = float(sys.argv[3])
+		else:
+			compression = 0.0
 		if(len(sys.argv) == 6):
 			l = (1.0-compression)*float(sys.argv[4])
 			element = sys.argv[5]
@@ -77,6 +80,6 @@ def main():
 				k += 1
 				f.write("%s %10.5f %10.5f %10.5f 0 %i\n"  %(element, point[0], point[1], point[2], k))
 	else:
-		print("use: python3 %s radius n(cube unit cells to cut from) compression(0>c<=1)"%(ntpath.basename(sys.argv[0])))
+		print("use: python3 %s radius n(cube unit cells to cut from)"%(ntpath.basename(sys.argv[0])))
 
 main()
